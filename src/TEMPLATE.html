@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./src/rendered.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Geo&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    </head>
+    <body class="text-white bg-black font-[Geo]">
+        <div id="navbar" class="z-50 flex flex-row 
+        items-center justify-left w-vw sticky top-0 h-(--navbar-height) bg-black">
+            <span class="material-symbols-sharp
+            text-miku-green
+            p-3 m-5 text-5xl bg-black rounded-full
+            -rotate-90
+            ">graph_4</span>
+            <div>
+                <a href="/" class="text-5xl navbar-item">Home</a>
+                <a href="/about" class="text-xl navbar-item">About Me</a>
+                <a href="/projects" class="text-xl navbar-item">Projects Gallery</a>
+                <a href="/achievements" class="text-xl navbar-item">Achievements</a>
+            </div>
+        </div>
+        
+        <main >
+            {%block content%}
+            {%endblock%}
+            
+        </main>
+
+        
+        <div class="bg-miku-gray-dark p-[2vw]">
+            <div class="flex flex-row items-center justify-left">
+                <p class="text-2xl pr-2">Find Me Here ! : </p>
+                <a target="_blank" href="mailto:deidara.tqin@gmail.com" class="socials-icon">
+                    <img class="w-8" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg">    
+                </a>
+                <a target="_blank" href="https://www.instagram.com/tqin3907/" class="socials-icon">
+                    <img class="w-8" src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg">    
+                </a>
+                <a target="_blank" href="https://github.com/qinyuehaothomas" class="socials-icon">
+                    <img class="w-8" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg">
+                </a>
+                <a target="_blank" href="https://leetcode.com/u/Tqin3907/" class="socials-icon">
+                    <img class="w-8" src="https://upload.wikimedia.org/wikipedia/commons/a/ab/LeetCode_logo_white_no_text.svg">
+                </a>
+            </div>
+            <a href="https://google.com">Made by Tqin <span class="text-lg text-gray-600">View source code</span></a>
+        </div>
+    </body>
+</html>

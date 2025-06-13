@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme{
+    --color-miku-green: #50d5d0;
+    --color-miku-green-dark: #50d5d0;
+    --color-miku-pink: #e12885;
+    --color-miku-gray:#bec8d1;
+    --color-miku-gray-dark:#373b3e;
+    --navbar-height:8vh;
+
+    /* for  intro page cursor animation*/
+    --animate-blink: blink 1s steps(2) infinite;
+    @keyframes blink{
+        0%{border-right-width: 0em;}
+        100%{border-right-width: 0.5em;}
+    }
+}
+
+
+@layer components {
+    .hero-bg-image{
+        @apply w-full h-auto absolute object-cover;
+        @apply h-[calc(100vh-var(--navbar-height))]
+    }
+    .socials-icon{
+        @apply py-1.5 px-5 h-1/8;
+        @apply hover:drop-shadow-lg;
+        @apply transition-all duration-300 ease-in-out ;
+
+    }
+
+    .text-outline{
+        text-shadow:
+            0.075em 0 0 #000,
+            0 0.075em 0 #000,
+            -0.075em 0 0 #000,
+            0 -0.075em 0 #000;
+    }
+    
+
+    .socials-icon>img{
+        @apply grayscale;
+        @apply hover:grayscale-0;
+        @apply transition-all duration-300 ease-in-out ;
+    }
+
+    .navbar-item{
+        @apply px-[1em]  text-miku-green font-bold;
+        @apply hover:text-shadow-[3px_3px_1px] hover:text-shadow-miku-pink;
+        @apply transition-all duration-300 ease-in-out ;
+    }
+    .show-while-hover{
+        @apply opacity-0 bg-black;
+        @apply group-hover:opacity-100 top-0;
+        @apply transition-all duration-300 ease-in-out ;
+    }
+
+    
+}
