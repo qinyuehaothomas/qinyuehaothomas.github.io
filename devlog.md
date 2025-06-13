@@ -43,3 +43,7 @@ The *titles* variable might want to move outside as a json file?
 
 Have to create a new repo because neevr gitignore tailwind.exe....
 /_ \
+
+# Day 4
+Pulled off a all nighter i dont know what for
+But anyways the glitch effect is up and I think its quite cool
