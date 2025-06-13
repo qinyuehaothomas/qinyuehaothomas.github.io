@@ -41,3 +41,5 @@ Image type plz standardise to .png
 
 The *titles* variable might want to move outside as a json file?
 
+Have to create a new repo because neevr gitignore tailwind.exe....
+/_ \

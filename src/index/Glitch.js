@@ -8,7 +8,7 @@ const image_src=(title)=>`/media/index/${title}.png`
 
 function insert_img(title){
 
-    glitch_box.innerHTML=`<img src="${image_src(title)}" class="hero-bg-image">`
+    glitch_box.innerHTML=`<img src="${image_src(title)}" class="hero-bg-image opacity-70">`
 }
 
 
@@ -19,9 +19,11 @@ function slice_img(title){
 
     for(let i=0;i<20;i++){
         // generate radom coordinates
-        let [x,y]=[randint(100),randint(100)];
-        let [w,h]=[ Math.max(0,randint(100-x)),
-            Math.max(0,randint(20))];
+        let [x,y]=[
+            randint(100),
+            randint(100)];
+        let [w,h]=[ randint(50-x)+20,
+            randint(15)+5];
 
         var cur=document.createElement('img');
         cur.src=image_src(title);
@@ -39,6 +41,19 @@ function slice_img(title){
     return document.getElementsByClassName("glitch-slices");
 }
 
-function set_glitch_animation(node){
-    return
+function glitch(node){
+    if(Math.random()<0.1){
+        // console.log(node);
+        node.style.top=`${randint(20)-10}%`;
+        node.style.right=`${randint(100)-50}%`;
+        var coin=Math.random();
+        if(coin<0.4){
+            node.style.filter="sepia(1) brightness(200%) hue-rotate(148deg)";
+        }else if(coin<0.6){
+            node.style.filter="sepia(1) brightness(200%) hue-rotate(300deg)";
+        }else if(coin<0.9){
+            node.style.filter="invert()";
+        }
+        
+    }
 }

@@ -10,7 +10,7 @@ const TITLES=[
 ]
 
 const LETTER_INTERVAL=100;
-const WORD_INTERVL=1000;
+
 var prev_timestamp=0;
 var current_title=-1; // some indexing issue...
 
@@ -34,24 +34,35 @@ function animate_letter(timestamp){
 
 var is_glitching=false;
 
+var last_glitch=0;
+
+const GLITCH_DURATION=240;
+const GLITCH_PAUSE=1000;
 function animate_glitch(timestamp){
-    if(!is_glitching){
+    if(!is_glitching && timestamp-prev_timestamp>GLITCH_PAUSE){
+        prev_timestamp=timestamp;
         glitch_slices=slice_img(TITLES[current_title].text);
-        glitch_slices.forEac
         is_glitching=true;
+    }else if (is_glitching){
+        if(timestamp-prev_timestamp>GLITCH_DURATION){
+            is_glitching=false;
+            prev_timestamp=timestamp;
+            requestAnimationFrame(animate_transition);
+            return
+        }else{
+            if (timestamp-last_glitch>100){
+                [...glitch_slices].forEach(glitch);
+                last_glitch=timestamp;
+            }
+            requestAnimationFrame(animate_glitch);
+            return
+        }
     }
-    if(timestamp-prev_timestamp>WORD_INTERVL){
-        requestAnimationFrame(animate_transition)
-    }else{
-
-        requestAnimationFrame(animate_glitch);
-    }
-
+    requestAnimationFrame(animate_glitch);
     // glitch and switch image
 }
 
 function animate_transition(timestamp){
-    is_glitching=false;
     prev_timestamp=timestamp;
     
     current_title=(current_title+1)%TITLES.length;

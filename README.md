@@ -10,6 +10,7 @@ To make my life easier, I'll embed my posts elsewhere into the site?
 Those without external post will rely on **image carousell**
 
 # Compiling
+- **REMEBER TO GITIGNORE tailwind.exe!!!**
 - Achievement
 Go under `src\Achievement\<EVENT NAME>`, get description from `details.json`, and put up all the pictures in the folder
 

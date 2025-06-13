@@ -20,7 +20,8 @@
 @layer components {
     .hero-bg-image{
         @apply w-full h-auto absolute object-cover;
-        @apply h-[calc(100vh-var(--navbar-height))]
+        @apply h-[calc(100vh-var(--navbar-height))];
+        /* animation-composition:replace; */
     }
     .socials-icon{
         @apply py-1.5 px-5 h-1/8;
