@@ -52,9 +52,9 @@ function glitch(node,timestamp){
         node.style.right=`${randint(100)-50}%`;
         var coin=Math.random();
         if(coin<0.4){
-            node.style.filter="sepia(1) brightness(200%) hue-rotate(148deg)";
+            node.style.filter="sepia(1) brightness(100%) hue-rotate(148deg)";
         }else if(coin<0.8){
-            node.style.filter="sepia(1) brightness(200%) hue-rotate(300deg)";
+            node.style.filter="sepia(1) brightness(100%) hue-rotate(300deg)";
         }else if(coin<0.9){
             node.style.filter="invert()";
         }

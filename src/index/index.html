@@ -1,6 +1,11 @@
 {% extends "TEMPLATE.html"%}
+
+{%block title%}
+Tqin's Portfolio
+{%endblock%}
+
 {% block content %}
-    <div class="h-[calc(100vh-var(--navbar-height))] max-w-screen flex relative">
+    <div class="full-screen-seg flex relative">
         
         <div id="glitch-box" class=" absolute inset-0 overflow-x-clip">
         </div>
@@ -8,8 +13,12 @@
         justify-self-start self-end p-[5vh]
         z-10">
             
-            <p class="text-5xl top-[50%] text-outline">I Make...</p>
-            <p id="Typewriter" class="text-[15vh] h-[1em] pr-[0.1em]
+            <p class="
+            text-[min(5vh,5vw)]
+            top-[50%] text-outline">I Make...</p>
+            <p id="Typewriter" class="
+            text-[min(15vh,15vw)]
+            h-[1em] pr-[0.1em]
             animate-blink float-start border-r-white
             flex items-center"></p>
         </div>

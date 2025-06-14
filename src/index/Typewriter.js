@@ -33,7 +33,7 @@ function animate_letter(timestamp){
 
 
 
-const GLITCH_DURATION=3000;
+const GLITCH_DURATION=1500;
 function animate_glitch(timestamp){
     if(timestamp-prev_timestamp>GLITCH_DURATION){
         is_glitching=false;
