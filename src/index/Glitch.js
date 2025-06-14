@@ -47,7 +47,7 @@ function glitch(node,timestamp){
     if(timestamp<Number(node.dataset.next_timestamp)){
         return;
     }
-    if(node.dataset.distorted=="false"){
+    if(node.dataset.distorted==null){
         node.style.top=`${randint(20)-10}%`;
         node.style.right=`${randint(100)-50}%`;
         var coin=Math.random();
@@ -68,7 +68,7 @@ function glitch(node,timestamp){
         node.style.right="0px";
         node.style.filter="";
         
-        node.dataset.distorted=false;
+        delete node.dataset.distorted;
         // duration of restore
         node.dataset.next_timestamp=timestamp+randint(3)*50+1000;
 

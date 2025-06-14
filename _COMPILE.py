@@ -34,18 +34,17 @@ def scrap_git_projects():
     pass
 
 
-# Vibe Coded !!!!
-# I mean its a freaking utility function
-def compress_images(src_dir):
+
+def render_html(root_dir):
     
-    """Compress images in src_dir and save to media_dir with folder structure"""
+    """Compress images in root_dir and save to media_dir with folder structure"""
     # Validate directory exists
-    src_path = os.path.join(src_dir, 'src')
+    src_path = os.path.join(root_dir, 'src')
     if not os.path.exists(src_path):
         raise FileNotFoundError(f"Source directory not found: {src_path}")
     
     # Create media directory
-    media_path = os.path.join(src_dir, 'media')
+    media_path = os.path.join(root_dir, 'media')
     os.makedirs(media_path, exist_ok=True)
     
     # Supported image extensions
@@ -54,10 +53,47 @@ def compress_images(src_dir):
     # Process all images
     for root, _, files in os.walk(src_path):
         for file in files:
+            src_file = os.path.join(root, file)
+            rel_path = os.path.relpath(root, src_path)
+
+
+            if file.lower().endswith(".html") and root!=src_path:
+                output_dir=os.path.join(root_dir,os.path.dirname(rel_path))
+                os.makedirs(output_dir, exist_ok=True)
+                output_file = os.path.join(output_dir, file )
+                
+                input_path=os.path.join(rel_path,file).replace("\\","/")
+                with open(output_file,"w") as f:
+                    f.write(Jinja_Env.get_template(input_path).render())
+                print(f"Rendered: {src_file} -> {output_file}")
+
+
+# Vibe Coded !!!!
+# I mean its a freaking utility function
+
+def compress_images(root_dir, FORCED=False):
+    
+    """Compress images in root_dir and save to media_dir with folder structure"""
+    # Validate directory exists
+    src_path = os.path.join(root_dir, 'src')
+    if not os.path.exists(src_path):
+        raise FileNotFoundError(f"Source directory not found: {src_path}")
+    
+    # Create media directory
+    media_path = os.path.join(root_dir, 'media')
+    os.makedirs(media_path, exist_ok=True)
+    
+    # Supported image extensions
+    img_exts = ('.jpg', '.jpeg', '.png', '.bmp', '.gif', '.tiff', '.webp')
+    
+    # Process all images
+    for root, _, files in os.walk(src_path):
+        for file in files:
+            src_file = os.path.join(root, file)
+            rel_path = os.path.relpath(root, src_path)
+
             if file.lower().endswith(img_exts):
                 # Get paths
-                src_file = os.path.join(root, file)
-                rel_path = os.path.relpath(root, src_path)
                 media_dir = os.path.join(media_path, rel_path)
                 output_file = os.path.join(media_dir, os.path.splitext(file)[0] + '.png')
                 
@@ -66,6 +102,9 @@ def compress_images(src_dir):
                 
                 # Process image
                 try:
+                    if os.path.exists(output_file):
+                        print(f"Already Exist: {output_file}")
+                        continue
                     with Image.open(src_file) as img:
                         # Resize if wider than 1280px
                         if img.width > 1280:
@@ -90,9 +129,6 @@ if __name__=="__main__":
     # Mirror directory into /meida folder
     # Convert file type to .png
     # Most importantly, vibe coded ╮（╯＿╰）╭
-    compress_images(DIR) if len(sys.argv)>1 else False
+    compress_images(DIR,  True if len(sys.argv)>1 else False)
 
-
-    with open("index.html","w") as f:
-        f.write(Jinja_Env.get_template(r"/index/index.html").render())
-    pass
+    render_html(DIR)

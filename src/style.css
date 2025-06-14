@@ -18,6 +18,15 @@
 
 
 @layer components {
+    .intro-scroll-show{
+        @apply bg-white/30;
+        @apply p-[1em] relative col-span-2;
+        @apply m-[min(5vh,5vw)];
+        @apply flex items-center justify-center;
+        @apply backdrop-blur-sm;
+        @apply transition-all duration-300 ease-in-out ;
+        right:100%;
+    }
     .hero-bg-image{
         @apply w-full h-auto absolute object-cover  brightness-65 -z-10;
         @apply h-[calc(100vh-var(--navbar-height))];
@@ -55,11 +64,7 @@
         @apply hover:drop-shadow-[3px_3px_0px] hover:drop-shadow-miku-pink;
         @apply transition-all duration-300 ease-in-out ;
     }
-    .show-while-hover{
-        @apply opacity-0 bg-black;
-        @apply group-hover:opacity-100 top-0;
-        @apply transition-all duration-300 ease-in-out ;
-    }
+    
 
     
 }

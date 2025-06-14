@@ -46,4 +46,15 @@ Have to create a new repo because neevr gitignore tailwind.exe....
 
 # Day 4
 Pulled off a all nighter i dont know what for
-But anyways the glitch effect is up and I think its quite cool
+But anyways the glitch effect is up and I think its quite cool 
+
+Fine-tune the glitch effect (what for bro)
+added icon?
+
+Time to write some content i guess?
+
+**Future Problem: Image is loading everytime image switches, need cache.**
+
+did some work on the compiler?
+
+**For Compilier, Definitely want to make a "walk" decorator for different types of operations**

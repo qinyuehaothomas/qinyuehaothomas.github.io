@@ -1,4 +1,3 @@
-
 const Typewriter=document.getElementById("Typewriter");
 var glitch_slices;
 const TITLES=[
