@@ -32,32 +32,17 @@ function animate_letter(timestamp){
 }
 
 
-var is_glitching=false;
 
-var last_glitch=0;
-
-const GLITCH_DURATION=240;
-const GLITCH_PAUSE=1000;
+const GLITCH_DURATION=3000;
 function animate_glitch(timestamp){
-    if(!is_glitching && timestamp-prev_timestamp>GLITCH_PAUSE){
+    if(timestamp-prev_timestamp>GLITCH_DURATION){
+        is_glitching=false;
         prev_timestamp=timestamp;
-        glitch_slices=slice_img(TITLES[current_title].text);
-        is_glitching=true;
-    }else if (is_glitching){
-        if(timestamp-prev_timestamp>GLITCH_DURATION){
-            is_glitching=false;
-            prev_timestamp=timestamp;
-            requestAnimationFrame(animate_transition);
-            return
-        }else{
-            if (timestamp-last_glitch>100){
-                [...glitch_slices].forEach(glitch);
-                last_glitch=timestamp;
-            }
-            requestAnimationFrame(animate_glitch);
-            return
-        }
+        requestAnimationFrame(animate_transition);
+        return
     }
+
+    [...glitch_slices].forEach(node=>glitch(node,timestamp));
     requestAnimationFrame(animate_glitch);
     // glitch and switch image
 }
@@ -67,6 +52,7 @@ function animate_transition(timestamp){
     
     current_title=(current_title+1)%TITLES.length;
     insert_img(TITLES[current_title].text);
+    glitch_slices=slice_img(TITLES[current_title].text);
     Typewriter.innerText="";
     Typewriter.style.color=TITLES[current_title].colour
     requestAnimationFrame(animate_letter);

@@ -19,7 +19,7 @@
 
 @layer components {
     .hero-bg-image{
-        @apply w-full h-auto absolute object-cover;
+        @apply w-full h-auto absolute object-cover  brightness-65;
         @apply h-[calc(100vh-var(--navbar-height))];
         /* animation-composition:replace; */
     }
