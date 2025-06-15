@@ -11,10 +11,17 @@ Those without external post will rely on **image carousell**
 
 # Compiling
 - **REMEBER TO GITIGNORE tailwind.exe!!!**
+- **Force render (render even when target exists) by `python _COMPILE.py <ANYTHING>`**
 - Achievement
 Go under `src\Achievement\<EVENT NAME>`, get description from `details.json`, and put up all the pictures in the folder
 
 - Images please format in`.png`
+
+- The directory of html files are confusing
+The html paths is confusing,
+basically `root/src/a/b/c/c.html` (The template)\
+becomes `root/a/b/c.html`
+
 
 # Deployment
 First, download tailwind standalone cli (file too large cannot upload)

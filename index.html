@@ -2,7 +2,7 @@
 <html class="scroll-smooth">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="./src/rendered.css" rel="stylesheet" type="text/css">
+        <link href="/src/rendered.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css2?family=Geo&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
         
@@ -10,20 +10,28 @@
 Tqin's Portfolio
 </title>
         <link rel="icon"  href="/favicon.png">
+        
+<script src="/src/index/Glitch.js" defer></script>
+<script src="/src/index/Typewriter.js" defer></script>
+<script src="/src/index/Scroll_Show.js"  defer></script>
+
+
     </head>
-    <body class="text-white bg-black font-[Geo]">
-        <div id="navbar" class="z-50 flex flex-row 
-        items-center justify-left w-vw sticky top-0 h-(--navbar-height) bg-black">
+    <body id="top" class="text-white bg-black font-[Geo]">
+        <nav id="navbar" class="z-50 flex flex-row 
+        items-center gap-[2vw]
+        w-full sticky top-0 h-(--navbar-height) bg-black">
             <img src="/favicon.png" class="
-            navbar-item p-0
-            justify-self-end ml-[2vw] max-w-[3vw]">
-            <div>
-                <a href="/" class="text-5xl pl-[0.5em] navbar-item">Home</a>
-                <a href="/#intro" class="text-xl navbar-item">About Me</a>
-                <a href="/projects" class="text-xl navbar-item">Projects Gallery</a>
-                <a href="/achievements" class="text-xl navbar-item">Achievements</a>
-            </div>
-        </div>
+            navbar-item
+            object-contain
+            justify-self-begin ml-[3vw] max-w-[3vw]">
+
+            <a href="/#top" class="text-[3vw] navbar-item">Home</a>
+            <a href="/#intro" class="text-[2vw] navbar-item">About Me</a>
+            <a href="/projects" class="text-[2vw] navbar-item">Projects Gallery</a>
+            <a href="/achievements" class="text-[2vw] navbar-item">Achievements</a>
+
+    </nav>
         
         <main >
             
@@ -46,22 +54,20 @@ Tqin's Portfolio
             flex items-center"></p>
         </div>
     
-        <!-- <div id="Glitch" class=" absolute self-center w-[30vw] h-[30vw] right-[10%]  ">
-        </div> -->
-        <script src="/src/index/Glitch.js" defer></script>
-        <script src="/src/index/Typewriter.js" defer></script>
+        
     </section>
-    <!-- <h1 class="text-[1000px] ">SIGMA BOY</h1> -->
+    
 
 
-    <section id="intro" class="full-screen-seg
+    <section id="intro" class="
+    max-h-full max-w-full pt-(--navbar-height)
     grid grid-cols-3 grid-rows-2">
         
             <div class="intro-scroll-show
             mb-0 rounded-t-[5vw]">
                 <article  class="text-justify">
-                    <p class="text-[50px]"><span class="text-miku-green">01</span>Lorem ipsum</p>
-                    <p class="text-xl indent-[4em]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fermentum nisi at odio imperdiet, a luctus velit aliquam. Pellentesque congue sapien purus, in aliquet ex vehicula vulputate. Quisque eu eros volutpat, egestas augue sit amet, accumsan metus. Duis lobortis nunc pretium elementum porta. Suspendisse potenti. Maecenas quis lacus nunc. Nunc rutrum vehicula metus, in venenatis tortor egestas pretium. Vestibulum commodo gravida ipsum quis fermentum. Nulla facilisi. Maecenas rhoncus libero lorem, id bibendum diam mattis eu. Integer condimentum pellentesque est placerat fermentum. Aenean suscipit diam augue, quis porttitor nisi tempor at.
+                    <p class="text-[50px]"><span class="text-miku-green">01</span>No time liao!!!</p>
+                    <p class="text-xl indent-[4em]">This is taking wayyy to long, i needa start studying
                     </p>
                 </article>
             </div>
@@ -94,17 +100,15 @@ Tqin's Portfolio
             bg-[url(/media/index/hero.png)] bg-cover bg-no-repeat
             mask-l-from-80% mask-r-from-80% mask-b-from-80%
             row-span-full col-span-1 col-end-[-1] self-center
-            h-8/9 max-w-full
-            opacity-0 -bottom-[5%] z-20
+            h-8/9 
+            opacity-0 -bottom-[5%]
             transition-all duration-500 ease-in-out 
             ">
-
+            <span class="absolute bottom-[50%] size-[10%] "></span>
             </div>
             </div>
     </section>
     
-    <script src="/src/index/Scroll_Show.js"  defer>
-    </script>
 
             
         </main>

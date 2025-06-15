@@ -58,3 +58,23 @@ Time to write some content i guess?
 did some work on the compiler?
 
 **For Compilier, Definitely want to make a "walk" decorator for different types of operations**
+
+# Day 5 
+Some extremely unlegiable 😵‍💫 bullcrap.
+So for `scrap_git_project()`, if I directly render a template:
+1. The template will be in `src` folder
+2. Everytime I want to change the format of github project pages,\
+**The scrapping have to be done again (because it is DIRECTLY rendered after scrapping)**
+
+So, big brain me comes up with this solution
+1. after scrapped, **store the scrapped content as variables** using `{% set <VARIABLE_NAME> ="" %}`\
+2. **directly put into html without rendering**
+3. When `render_html()` is executed, it will render 
+    1. the `<Project Name>.html`, with content as variables, and extends `GITHUB_TEMPLATE.html`
+    2. Then `GITHUB_TEMPLATE.html`, which put in CSS and formatting of Github pages, and is an extension of `TEMPLATE.hmtl`
+    3. Then everything into `TEMPLATE.html`
+4. Then everything will be saved in the file in the destination folder!
+
+So everytime I edit `GITHUB_PROJECT.html`, scrapping does not need ot be done again !
+
+Styled project card ~~Teto Pear~~

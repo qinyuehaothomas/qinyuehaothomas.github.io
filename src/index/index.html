@@ -4,6 +4,13 @@
 Tqin's Portfolio
 {%endblock%}
 
+{%block extension_script%}
+<script src="/src/index/Glitch.js" defer></script>
+<script src="/src/index/Typewriter.js" defer></script>
+<script src="/src/index/Scroll_Show.js"  defer></script>
+
+{%endblock%}
+
 {% block content %}
     <section class="full-screen-seg flex relative">
         
@@ -24,22 +31,20 @@ Tqin's Portfolio
             flex items-center"></p>
         </div>
     
-        <!-- <div id="Glitch" class=" absolute self-center w-[30vw] h-[30vw] right-[10%]  ">
-        </div> -->
-        <script src="/src/index/Glitch.js" defer></script>
-        <script src="/src/index/Typewriter.js" defer></script>
+        
     </section>
-    <!-- <h1 class="text-[1000px] ">SIGMA BOY</h1> -->
+    
 
 
-    <section id="intro" class="full-screen-seg
+    <section id="intro" class="
+    max-h-full max-w-full pt-(--navbar-height)
     grid grid-cols-3 grid-rows-2">
         
             <div class="intro-scroll-show
             mb-0 rounded-t-[5vw]">
                 <article  class="text-justify">
-                    <p class="text-[50px]"><span class="text-miku-green">01</span>Lorem ipsum</p>
-                    <p class="text-xl indent-[4em]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fermentum nisi at odio imperdiet, a luctus velit aliquam. Pellentesque congue sapien purus, in aliquet ex vehicula vulputate. Quisque eu eros volutpat, egestas augue sit amet, accumsan metus. Duis lobortis nunc pretium elementum porta. Suspendisse potenti. Maecenas quis lacus nunc. Nunc rutrum vehicula metus, in venenatis tortor egestas pretium. Vestibulum commodo gravida ipsum quis fermentum. Nulla facilisi. Maecenas rhoncus libero lorem, id bibendum diam mattis eu. Integer condimentum pellentesque est placerat fermentum. Aenean suscipit diam augue, quis porttitor nisi tempor at.
+                    <p class="text-[50px]"><span class="text-miku-green">01</span>No time liao!!!</p>
+                    <p class="text-xl indent-[4em]">This is taking wayyy to long, i needa start studying
                     </p>
                 </article>
             </div>
@@ -76,11 +81,9 @@ Tqin's Portfolio
             opacity-0 -bottom-[5%]
             transition-all duration-500 ease-in-out 
             ">
-
+            <span class="absolute bottom-[50%] size-[10%] "></span>
             </div>
             </div>
     </section>
     
-    <script src="/src/index/Scroll_Show.js"  defer>
-    </script>
 {% endblock%}
