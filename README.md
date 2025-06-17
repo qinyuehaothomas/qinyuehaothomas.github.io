@@ -7,6 +7,7 @@ Gotta hold my horses bud
 Here are the **TODO** s:
 1.  `projects_json_collapse()` function (now is a brute force placeholder)
     1. Description for github projects
+    1. Re-write cover page with typed.js
     1. Desmos
     1. CAD
     1. Origami
