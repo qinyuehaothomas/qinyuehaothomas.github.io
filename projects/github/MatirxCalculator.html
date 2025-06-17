@@ -1,4 +1,4 @@
-
+            
 <!DOCTYPE html>
 <html class="scroll-smooth">
     <head>
@@ -12,7 +12,10 @@
 </title>
         <link rel="icon"  href="/favicon.png">
         
-        
+
+<link href="https://fonts.googleapis.com/css2?family=Tomorrow&display=swap" rel="stylesheet">
+<link href="/src/projects/github/github_style_rendered.css" rel="stylesheet" type="text/css">
+
     </head>
     <body id="top" class="text-white bg-black font-[Geo]">
         <nav id="navbar" class="z-50 flex flex-row 
@@ -32,88 +35,88 @@
         
         <main >
             
-<div class=" bg-red px-10">
+<div class=" bg-red px-[5em] pb-[5em] font-[Tomorrow]">
      <article class="markdown-body entry-content container-lg" itemprop="text">
-<div class="markdown-heading" dir="auto">
-<h1 class="heading-element" dir="auto" tabindex="-1">
-Matrix Multiplication
-</h1>
-<a aria-label="Permalink: Matrix Multiplication" class="anchor" href="#matrix-multiplicationhttps://github.com#matrix-multiplication" id="user-content-matrix-multiplication">
-<svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
-<path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
-</path>
-</svg>
-</a>
-</div>
-<div class="markdown-heading" dir="auto">
-<h2 class="heading-element" dir="auto" tabindex="-1">
-How to Use
-</h2>
-<a aria-label="Permalink: How to Use" class="anchor" href="#how-to-usehttps://github.com#how-to-use" id="user-content-how-to-use">
-<svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
-<path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
-</path>
-</svg>
-</a>
-</div>
-<ol dir="auto">
-<li>
-Key in your numbers, they will become green
-</li>
-<li>
-programme will consider the green boxes
-</li>
-<li>
-press multiply
-</li>
-<li>
-result will come out below
-</li>
-</ol>
-<div class="markdown-heading" dir="auto">
-<h2 class="heading-element" dir="auto" tabindex="-1">
-Notice
-</h2>
-<a aria-label="Permalink: Notice" class="anchor" href="#noticehttps://github.com#notice" id="user-content-notice">
-<svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
-<path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
-</path>
-</svg>
-</a>
-</div>
-<p dir="auto">
-This only support up to 5*5 (which is more than sufficent for doing math HW)
+ <div class="markdown-heading" dir="auto">
+  <h1 class="heading-element" dir="auto" tabindex="-1">
+   Matrix Multiplication
+  </h1>
+  <a aria-label="Permalink: Matrix Multiplication" class="anchor" href="#matrix-multiplicationhttps://github.com#matrix-multiplication" id="user-content-matrix-multiplication">
+   <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+    <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+    </path>
+   </svg>
+  </a>
+ </div>
+ <div class="markdown-heading" dir="auto">
+  <h2 class="heading-element" dir="auto" tabindex="-1">
+   How to Use
+  </h2>
+  <a aria-label="Permalink: How to Use" class="anchor" href="#how-to-usehttps://github.com#how-to-use" id="user-content-how-to-use">
+   <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+    <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+    </path>
+   </svg>
+  </a>
+ </div>
+ <ol dir="auto">
+  <li>
+   Key in your numbers, they will become green
+  </li>
+  <li>
+   programme will consider the green boxes
+  </li>
+  <li>
+   press multiply
+  </li>
+  <li>
+   result will come out below
+  </li>
+ </ol>
+ <div class="markdown-heading" dir="auto">
+  <h2 class="heading-element" dir="auto" tabindex="-1">
+   Notice
+  </h2>
+  <a aria-label="Permalink: Notice" class="anchor" href="#noticehttps://github.com#notice" id="user-content-notice">
+   <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+    <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+    </path>
+   </svg>
+  </a>
+ </div>
+ <p dir="auto">
+  This only support up to 5*5 (which is more than sufficent for doing math HW)
 please dont try to crash the programme... if it crash, reload
-</p>
-<div class="markdown-heading" dir="auto">
-<h2 class="heading-element" dir="auto" tabindex="-1">
-Why?
-</h2>
-<a aria-label="Permalink: Why?" class="anchor" href="#whyhttps://github.com#why" id="user-content-why">
-<svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
-<path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
-</path>
-</svg>
-</a>
-</div>
-<p dir="auto">
-I dont want to do matrix multiplication math hw
-</p>
-<div class="markdown-heading" dir="auto">
-<h2 class="heading-element" dir="auto" tabindex="-1">
-<a href="https://qinyuehaothomas.github.io/MatirxCalculator/" rel="nofollow">
-LINK
-</a>
-</h2>
-<a aria-label="Permalink: LINK" class="anchor" href="#linkhttps://github.com#link" id="user-content-link">
-<svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
-<path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
-</path>
-</svg>
-</a>
-</div>
+ </p>
+ <div class="markdown-heading" dir="auto">
+  <h2 class="heading-element" dir="auto" tabindex="-1">
+   Why?
+  </h2>
+  <a aria-label="Permalink: Why?" class="anchor" href="#whyhttps://github.com#why" id="user-content-why">
+   <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+    <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+    </path>
+   </svg>
+  </a>
+ </div>
+ <p dir="auto">
+  I dont want to do matrix multiplication math hw
+ </p>
+ <div class="markdown-heading" dir="auto">
+  <h2 class="heading-element" dir="auto" tabindex="-1">
+   <a href="https://qinyuehaothomas.github.io/MatirxCalculator/https://qinyuehaothomas.github.io/MatirxCalculator/" rel="nofollow">
+    LINK
+   </a>
+  </h2>
+  <a aria-label="Permalink: LINK" class="anchor" href="#linkhttps://github.com#link" id="user-content-link">
+   <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+    <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+    </path>
+   </svg>
+  </a>
+ </div>
 </article>
-
+ 
 </div>
 
             

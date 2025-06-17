@@ -10,7 +10,7 @@ Tqin's Project Gallery
 {%block content%}
 
 <div class="w-full flex flex-col justify-evenly peer">
-    <h1 class="w-full">SIGMA BOI!!!</h1>
+    <h1 class="w-full">Project filter (Work in progress)</h1>
 </div>
 
 <div class="
@@ -21,35 +21,41 @@ bg-linear-to-r from-white/0 via-miku-green to-white/0
 transition-all duration-300 ease-in-out
 "></div>
 
-<div class="flex flex-row px-[10vw] py-[5vh] justify-between">
-
-    <section class="group flex flex-col relative
-    w-[40vh] h-[30vh] px-[5vw] py-[2vh] shrink-0
-    items-center justify-center overflow-clip
-    hover:border-[0.2em]
-    hover:border-miku-green
-    transition-all duration-300 ease-in-out
-    rounded-[1em]">
-    
-        <p class="text-[200%]">Teto Pear !!!</p>
-        <ol class="flex flex-row gap-[1em]">
-            <span class="pill bg-red-600">Teto</span>
-            <span class="pill bg-miku-green">Miku</span>
-        </ol>
-        <p class="overflow-clip max-h-0 text-justify
-        group-hover:max-h-[100%]
-        transition-all duration-300 ease-in-out">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla at elit porttitor, porttitor turpis eget, gravida est. Vivamus sit amet venenatis nisl. Suspendisse volutpat consequat velit. Nunc condimentum erat id.
-        </p>
-        
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuzsBQPqeCmH1jBhtGpQrs2C_ehGCPc6xJZw&s"
-        class=" absolute -z-10
-        min-w-full group-hover:min-w-[110%]
-        opacity-50
-        group-hover:blur-sm 
+<div class="flex flex-row flex-wrap px-[10vw] py-[5vh] gap-[1vw] my-auto ">
+    {% for project in projects%}
+        <section class="group flex flex-col relative
+        w-[40vh] h-[30vh] px-[5vw] py-[2vh] shrink-0
+        items-center justify-center overflow-clip
+        hover:border-[0.2em]
+        hover:border-miku-green
         transition-all duration-300 ease-in-out
-        ">
-    </section>
+        rounded-[1em]">
+        
+            <a  href="{{project.link}}" class="text-[200%]">{{ project.title}}</a>
+            <ol class="flex flex-row gap-[1em]">
+                {% for tag,color in project.tags%}
+                <span class="pill bg-{{color}}">{{tag}}</span>
+                {% endfor%}
+                <!-- <span class="pill bg-miku-green">Miku</span> -->
+            </ol>
+            <p class="overflow-clip max-h-0 text-justify
+            group-hover:max-h-[100%]
+            transition-all duration-300 ease-in-out">
+            {{project.description}}
+            </p>
+            
+            {# Thumbnail#}
+            {% if project.thumbnail %}
+                <img src="{{project.thumbnail}}"
+                class=" absolute -z-10
+                min-w-full group-hover:min-w-[110%]
+                opacity-50
+                group-hover:blur-sm 
+                transition-all duration-300 ease-in-out
+                ">
+            {%endif%}
+        </section>
+    {% endfor %}
 </div>
 
 {%endblock%}

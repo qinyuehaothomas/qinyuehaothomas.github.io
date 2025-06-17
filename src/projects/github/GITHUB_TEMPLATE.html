@@ -1,0 +1,18 @@
+
+{%extends "TEMPLATE.html"%}
+
+{%block title%}
+{{title}}
+{%endblock%}
+
+{%block extension_script%}
+
+<link href="https://fonts.googleapis.com/css2?family=Tomorrow&display=swap" rel="stylesheet">
+<link href="/src/projects/github/github_style_rendered.css" rel="stylesheet" type="text/css">
+{%endblock%}
+
+{%block content%}
+<div class=" bg-red px-[5em] pb-[5em] font-[Tomorrow]">
+    {{content|safe}}
+</div>
+{%endblock%}

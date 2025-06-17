@@ -1,60 +1,61 @@
-{% extends 'GITHUB_TEMPLATE.html' %}
+            {% extends '/projects/github/GITHUB_TEMPLATE.html' %}
+                               
+            {% set title = ''' WordleSolver '''  %}
 
-{% set title = ''' WordleSolver '''  %}
-
-{% set content =  ''' <article class="markdown-body entry-content container-lg" itemprop="text">
-<div class="markdown-heading" dir="auto">
-<h1 class="heading-element" dir="auto" tabindex="-1">
-Wordle Solver
-</h1>
-<a aria-label="Permalink: Wordle Solver" class="anchor" href="#wordle-solverhttps://github.com#wordle-solver" id="user-content-wordle-solver">
-<svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
-<path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
-</path>
-</svg>
-</a>
-</div>
-<p dir="auto">
-CLI programme to solve five word wordle,
+            {% set content =  ''' <article class="markdown-body entry-content container-lg" itemprop="text">
+ <div class="markdown-heading" dir="auto">
+  <h1 class="heading-element" dir="auto" tabindex="-1">
+   Wordle Solver
+  </h1>
+  <a aria-label="Permalink: Wordle Solver" class="anchor" href="#wordle-solverhttps://github.com#wordle-solver" id="user-content-wordle-solver">
+   <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+    <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+    </path>
+   </svg>
+  </a>
+ </div>
+ <p dir="auto">
+  CLI programme to solve five word wordle,
 word list from
-<a href="https://github.com/dwyl/english-words">
-This Repo
-</a>
-</p>
-<div class="markdown-heading" dir="auto">
-<h1 class="heading-element" dir="auto" tabindex="-1">
-How it works
-</h1>
-<a aria-label="Permalink: How it works" class="anchor" href="#how-it-workshttps://github.com#how-it-works" id="user-content-how-it-works">
-<svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
-<path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
-</path>
-</svg>
-</a>
-</div>
-<p dir="auto">
-Count No. of letters and give score to each letter.
-<br/>
-Each word, sum the scores of each letters.
-<br/>
-Find the highest "scored" word.
-</p>
-<p dir="auto">
-Just read the notebook for furthur details.
-</p>
-<div class="markdown-heading" dir="auto">
-<h1 class="heading-element" dir="auto" tabindex="-1">
-Background
-</h1>
-<a aria-label="Permalink: Background" class="anchor" href="#backgroundhttps://github.com#background" id="user-content-background">
-<svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
-<path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
-</path>
-</svg>
-</a>
-</div>
-<p dir="auto">
-wrote like 13/5/2022, for fun, in class.
-</p>
+  <a href="https://github.com/dwyl/english-wordshttps://github.com/dwyl/english-words">
+   This Repo
+  </a>
+ </p>
+ <div class="markdown-heading" dir="auto">
+  <h1 class="heading-element" dir="auto" tabindex="-1">
+   How it works
+  </h1>
+  <a aria-label="Permalink: How it works" class="anchor" href="#how-it-workshttps://github.com#how-it-works" id="user-content-how-it-works">
+   <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+    <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+    </path>
+   </svg>
+  </a>
+ </div>
+ <p dir="auto">
+  Count No. of letters and give score to each letter.
+  <br/>
+  Each word, sum the scores of each letters.
+  <br/>
+  Find the highest "scored" word.
+ </p>
+ <p dir="auto">
+  Just read the notebook for furthur details.
+ </p>
+ <div class="markdown-heading" dir="auto">
+  <h1 class="heading-element" dir="auto" tabindex="-1">
+   Background
+  </h1>
+  <a aria-label="Permalink: Background" class="anchor" href="#backgroundhttps://github.com#background" id="user-content-background">
+   <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+    <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+    </path>
+   </svg>
+  </a>
+ </div>
+ <p dir="auto">
+  wrote like 13/5/2022, for fun, in class.
+ </p>
 </article>
-'''  %}
+ '''  %}
+            

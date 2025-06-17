@@ -1,157 +1,158 @@
-{% extends 'GITHUB_TEMPLATE.html' %}
+            {% extends '/projects/github/GITHUB_TEMPLATE.html' %}
+                               
+            {% set title = ''' StaticVideoGenerator '''  %}
 
-{% set title = ''' StaticVideoGenerator '''  %}
-
-{% set content =  ''' <article class="markdown-body entry-content container-lg" itemprop="text">
-<div class="markdown-heading" dir="auto">
-<h1 class="heading-element" dir="auto" tabindex="-1">
-StaticVideoGenerator
-</h1>
-<a aria-label="Permalink: StaticVideoGenerator" class="anchor" href="#staticvideogeneratorhttps://github.com#staticvideogenerator" id="user-content-staticvideogenerator">
-<svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
-<path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
-</path>
-</svg>
-</a>
-</div>
-<p dir="auto">
-If you pause the video, you see nothing, but if you play the video you see something
+            {% set content =  ''' <article class="markdown-body entry-content container-lg" itemprop="text">
+ <div class="markdown-heading" dir="auto">
+  <h1 class="heading-element" dir="auto" tabindex="-1">
+   StaticVideoGenerator
+  </h1>
+  <a aria-label="Permalink: StaticVideoGenerator" class="anchor" href="#staticvideogeneratorhttps://github.com#staticvideogenerator" id="user-content-staticvideogenerator">
+   <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+    <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+    </path>
+   </svg>
+  </a>
+ </div>
+ <p dir="auto">
+  If you pause the video, you see nothing, but if you play the video you see something
 Inspired by
-<a href="https://www.youtube.com/watch?v=TdTMeNXCnTs" rel="nofollow">
-this video
-</a>
-Floyd-Steinburg Transformation written by ChatGPT
-</p>
-<div class="markdown-heading" dir="auto">
-<h2 class="heading-element" dir="auto" tabindex="-1">
-Result (Click to watch)
-</h2>
-<a aria-label="Permalink: Result (Click to watch)" class="anchor" href="#result-click-to-watchhttps://github.com#result-click-to-watch" id="user-content-result-click-to-watch">
-<svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
-<path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
-</path>
-</svg>
-</a>
-</div>
-<p dir="auto">
-<a href="https://www.youtube.com/embed/UJDuP1R9A4Y" rel="nofollow">
-<img alt="Thumbnail" data-canonical-src="https://img.youtube.com/vi/UJDuP1R9A4Y/maxresdefault.jpg" src="" style="max-width: 100%;"/>
-</a>
-</p>
-<div class="markdown-heading" dir="auto">
-<h2 class="heading-element" dir="auto" tabindex="-1">
-How?
-</h2>
-<a aria-label="Permalink: How?" class="anchor" href="#howhttps://github.com#how" id="user-content-how">
-<svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
-<path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
-</path>
-</svg>
-</a>
-</div>
-<p dir="auto">
-It use
-<strong>
-persistence of vision (POV)
-</strong>
-effect (I guess)
-</p>
-<ol dir="auto">
-<li>
-Original(last frame) is just random static(black and white)
-</li>
-<li>
-turn image you want to display to black and white
+  <a href="https://www.youtube.com/watch?v=TdTMeNXCnTshttps://www.youtube.com/watch?v=TdTMeNXCnTs" rel="nofollow">
+   this video
+  </a>
+  Floyd-Steinburg Transformation written by ChatGPT
+ </p>
+ <div class="markdown-heading" dir="auto">
+  <h2 class="heading-element" dir="auto" tabindex="-1">
+   Result (Click to watch)
+  </h2>
+  <a aria-label="Permalink: Result (Click to watch)" class="anchor" href="#result-click-to-watchhttps://github.com#result-click-to-watch" id="user-content-result-click-to-watch">
+   <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+    <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+    </path>
+   </svg>
+  </a>
+ </div>
+ <p dir="auto">
+  <a href="https://www.youtube.com/embed/UJDuP1R9A4Yhttps://www.youtube.com/embed/UJDuP1R9A4Y" rel="nofollow">
+   <img alt="Thumbnail" data-canonical-src="https://img.youtube.com/vi/UJDuP1R9A4Y/maxresdefault.jpg" src="https://camo.githubusercontent.com/be22e1661d277e3e3d8c7bbd37b2a8afa1f255ac4df73b08625eda8a2e0445c7/68747470733a2f2f696d672e796f75747562652e636f6d2f76692f554a4475503152394134592f6d617872657364656661756c742e6a7067" style="max-width: 100%;"/>
+  </a>
+ </p>
+ <div class="markdown-heading" dir="auto">
+  <h2 class="heading-element" dir="auto" tabindex="-1">
+   How?
+  </h2>
+  <a aria-label="Permalink: How?" class="anchor" href="#howhttps://github.com#how" id="user-content-how">
+   <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+    <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+    </path>
+   </svg>
+  </a>
+ </div>
+ <p dir="auto">
+  It use
+  <strong>
+   persistence of vision (POV)
+  </strong>
+  effect (I guess)
+ </p>
+ <ol dir="auto">
+  <li>
+   Original(last frame) is just random static(black and white)
+  </li>
+  <li>
+   turn image you want to display to black and white
 This is the "mask"
-</li>
-<li>
-flip the color of Orginal pixel for black pixel in mask,keep for white in mask
-</li>
-</ol>
-<div class="markdown-heading" dir="auto">
-<h2 class="heading-element" dir="auto" tabindex="-1">
-How to Use
-</h2>
-<a aria-label="Permalink: How to Use" class="anchor" href="#how-to-usehttps://github.com#how-to-use" id="user-content-how-to-use">
-<svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
-<path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
-</path>
-</svg>
-</a>
-</div>
-<ol dir="auto">
-<li>
-run code, select video you want to convert, wait, done
-</li>
-<li>
-output will be saved in same folder as input.
-</li>
-</ol>
-<div class="markdown-heading" dir="auto">
-<h2 class="heading-element" dir="auto" tabindex="-1">
-Process
-</h2>
-<a aria-label="Permalink: Process" class="anchor" href="#processhttps://github.com#process" id="user-content-process">
-<svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
-<path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
-</path>
-</svg>
-</a>
-</div>
-<p dir="auto">
-At first i though of Flyod-Steinburg Dithering , but result was poor
+  </li>
+  <li>
+   flip the color of Orginal pixel for black pixel in mask,keep for white in mask
+  </li>
+ </ol>
+ <div class="markdown-heading" dir="auto">
+  <h2 class="heading-element" dir="auto" tabindex="-1">
+   How to Use
+  </h2>
+  <a aria-label="Permalink: How to Use" class="anchor" href="#how-to-usehttps://github.com#how-to-use" id="user-content-how-to-use">
+   <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+    <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+    </path>
+   </svg>
+  </a>
+ </div>
+ <ol dir="auto">
+  <li>
+   run code, select video you want to convert, wait, done
+  </li>
+  <li>
+   output will be saved in same folder as input.
+  </li>
+ </ol>
+ <div class="markdown-heading" dir="auto">
+  <h2 class="heading-element" dir="auto" tabindex="-1">
+   Process
+  </h2>
+  <a aria-label="Permalink: Process" class="anchor" href="#processhttps://github.com#process" id="user-content-process">
+   <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+    <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+    </path>
+   </svg>
+  </a>
+ </div>
+ <p dir="auto">
+  At first i though of Flyod-Steinburg Dithering , but result was poor
 Then i simply turn super high contrast , it was better
 I want this type of detailed, but dunno the algrithm
-<a href="https://camo.githubusercontent.com/95cbec4230a83c1d861afc0bc64ae0bcf6e617a05ed36c938a8a8462d4746375/68747470733a2f2f692e70696e696d672e636f6d2f353634782f62652f31362f62332f62653136623332643962313862303161636130666665306266326663633834612e6a7067" rel="noopener noreferrer nofollow" target="_blank">
-<img alt="Stalin" data-canonical-src="https://i.pinimg.com/564x/be/16/b3/be16b32d9b18b01aca0ffe0bf2fcc84a.jpg" src="" style="max-width: 100%;"/>
-</a>
-</p>
-<div class="markdown-heading" dir="auto">
-<h2 class="heading-element" dir="auto" tabindex="-1">
-Future Ideas
-</h2>
-<a aria-label="Permalink: Future Ideas" class="anchor" href="#future-ideashttps://github.com#future-ideas" id="user-content-future-ideas">
-<svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
-<path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
-</path>
-</svg>
-</a>
-</div>
-<p dir="auto">
-A better algrithm is
-<strong>
-K mean clustering
-</strong>
-Maybe in the future ill add a
-<strong>
-image function
-</strong>
-, can
-<strong>
-hide a static image behind moving noise
-</strong>
-.
+  <a href="https://camo.githubusercontent.com/95cbec4230a83c1d861afc0bc64ae0bcf6e617a05ed36c938a8a8462d4746375/68747470733a2f2f692e70696e696d672e636f6d2f353634782f62652f31362f62332f62653136623332643962313862303161636130666665306266326663633834612e6a7067https://camo.githubusercontent.com/95cbec4230a83c1d861afc0bc64ae0bcf6e617a05ed36c938a8a8462d4746375/68747470733a2f2f692e70696e696d672e636f6d2f353634782f62652f31362f62332f62653136623332643962313862303161636130666665306266326663633834612e6a7067" rel="noopener noreferrer nofollow" target="_blank">
+   <img alt="Stalin" data-canonical-src="https://i.pinimg.com/564x/be/16/b3/be16b32d9b18b01aca0ffe0bf2fcc84a.jpg" src="https://camo.githubusercontent.com/95cbec4230a83c1d861afc0bc64ae0bcf6e617a05ed36c938a8a8462d4746375/68747470733a2f2f692e70696e696d672e636f6d2f353634782f62652f31362f62332f62653136623332643962313862303161636130666665306266326663633834612e6a7067" style="max-width: 100%;"/>
+  </a>
+ </p>
+ <div class="markdown-heading" dir="auto">
+  <h2 class="heading-element" dir="auto" tabindex="-1">
+   Future Ideas
+  </h2>
+  <a aria-label="Permalink: Future Ideas" class="anchor" href="#future-ideashttps://github.com#future-ideas" id="user-content-future-ideas">
+   <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+    <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+    </path>
+   </svg>
+  </a>
+ </div>
+ <p dir="auto">
+  A better algrithm is
+  <strong>
+   K mean clustering
+  </strong>
+  Maybe in the future ill add a
+  <strong>
+   image function
+  </strong>
+  , can
+  <strong>
+   hide a static image behind moving noise
+  </strong>
+  .
 Another idea is use
-<strong>
-ascii to do grayscale
-</strong>
-, but tired....
-</p>
-<div class="markdown-heading" dir="auto">
-<h2 class="heading-element" dir="auto" tabindex="-1">
-Requiste
-</h2>
-<a aria-label="Permalink: Requiste" class="anchor" href="#requistehttps://github.com#requiste" id="user-content-requiste">
-<svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
-<path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
-</path>
-</svg>
-</a>
-</div>
-<p dir="auto">
-pip install opencv-python
+  <strong>
+   ascii to do grayscale
+  </strong>
+  , but tired....
+ </p>
+ <div class="markdown-heading" dir="auto">
+  <h2 class="heading-element" dir="auto" tabindex="-1">
+   Requiste
+  </h2>
+  <a aria-label="Permalink: Requiste" class="anchor" href="#requistehttps://github.com#requiste" id="user-content-requiste">
+   <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+    <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+    </path>
+   </svg>
+  </a>
+ </div>
+ <p dir="auto">
+  pip install opencv-python
 pip install moviepy
 pip instal tqdm (a progress bar)
-</p>
+ </p>
 </article>
-'''  %}
+ '''  %}
+            

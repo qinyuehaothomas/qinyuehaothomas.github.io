@@ -78,3 +78,29 @@ So, big brain me comes up with this solution
 So everytime I edit `GITHUB_PROJECT.html`, scrapping does not need ot be done again !
 
 Styled project card ~~Teto Pear~~
+
+# Day 6
+styled github project pages
+make 404 page
+**For Later: Rewrite Cover page animation, Please transition to typed.js please**
+
+It's the end of june hols and I'm so freaking cooked for exams gotta stop here for a while bruh.
+
+Here are the **TODO** s:
+1.  `projects_json_collapse()` function (now is a brute force placeholder)
+    1. Description for github projects
+    1. Desmos
+    1. CAD
+    1. Origami
+    1. Robotics
+    1. Project filter
+1. Achievements
+    1. it's corrisponding functions
+    1. dates and statements
+    1. timeline
+1. Self-statements
+1. Add images
+
+good luck have fun 💀
+
+*Done on 17 June 2025*

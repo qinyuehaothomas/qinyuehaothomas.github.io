@@ -1,0 +1,36 @@
+{%extends "TEMPLATE.html"%}
+
+{%block title%}
+Page Not Found...
+{%endblock%}
+
+{%block extension_script%}
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+<style>
+  .typed-cursor{
+    color:var(--color-miku-green);
+    width:0.5em;
+  }
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', ()=> {
+var typed = new Typed(document.getElementById("typed"), {
+  strings:["Page Not Found!"],
+  loop:true,
+  typeSpeed:100
+});
+});
+</script>
+
+{%endblock%}
+
+{%block content%}
+
+<div class="flex flex-col full-screen-seg items-center">
+
+<p class="text-center text-[10vh] text-wrap"><span id="typed"></span></p>
+<p class="text-center">Back to <a href="/" class="text-miku-green">Home</a></p>
+</div>
+
+{%endblock%}
